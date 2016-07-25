@@ -18,6 +18,7 @@ gem 'uglifier', '>= 1.3.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'sqlite3'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
@@ -27,7 +28,6 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   # Use mysql as the database for Active Record
-	gem 'sqlite3'
 end
 
 group :development do
