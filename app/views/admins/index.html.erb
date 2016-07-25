@@ -1,0 +1,22 @@
+<div id="page-transitions">
+    
+<div class="page-preloader page-preloader-dark">
+    <img class="page-preload" src="/assets/preload.gif">
+</div>
+   
+<div class="header header-dark">
+    <a href="#" class="header-icon-1 show-left-sidebar"><i class="fa fa-navicon"></i></a>
+    <a href="#" class="header-logo"></a>
+    <a href="#" class="header-icon-4 show-right-sidebar"><i class="fa fa-envelope-o"></i></a>
+</div>
+
+<div id="page-content" class="page-content">
+    <div id="page-content-scroll">
+        <div class="content">    
+            <div class="decoration"></div>
+               <%= link_to "Sign out", destroy_user_session_path, method: 'delete', class: "login-button button button-small button-green button-fullscreen full-bottom" %>
+               <%= link_to "Posts", posts_path, class: "login-button button button-small bg-blue-dark button-fullscreen full-bottom" %>
+        </div>
+    </div>
+</div>
+

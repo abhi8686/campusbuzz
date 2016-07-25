@@ -1,0 +1,39 @@
+<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+      <h5>New Post</h5>
+      <strong>Title</strong>
+      <em>required</em>
+      <%= f.text_field :title, placeholder: "Enter the Title" %>                                 
+      <strong>Content</strong>
+      <em>required</em>
+      <%= f.text_area :body, placeholder: "Enter the content" %>                                   
+      <strong>Image Url</strong>
+      <em>required</em>
+      <%= f.text_field :image_url, placeholder: "Image Url" %>  
+
+      <strong>Video url</strong>
+      <em>required</em>
+      <%= f.text_field :video_url, placeholder: "Video Url" %>  
+      <strong>Category</strong>
+      <em>required</em>
+      <div class="store-input">
+      <%= f.select :category_id, options_from_collection_for_select(@categories, "id", "name", @post.category_id) %>
+      </div>
+  </div>
+
+  <a href="/posts" class="button button-green button-right full-top full-bottom"> Back</a>
+  <a href="#" class="button button-green button-right full-top full-bottom">  <%= f.submit class:"login-button  button-green" %></a>
+</div>
+  <div class="clear"></div>
+
+<% end %>

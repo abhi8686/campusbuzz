@@ -1,0 +1,49 @@
+<div class="sidebar-left">
+    <div class="sidebar-scroll-left sidebar-dark-clean">         
+        <div class="sidebar-image">
+            <h3>Welcome to College Buzz</h3>
+            <em>Once place for all news</em>
+            <div class="sidebar-overlay"></div>
+            <img src="assets/pictures/3.jpg" alt="img" class="responsive-image">
+        </div>       
+        <div class="sidebar-divider no-bottom no-top"></div>
+        <p class="sidebar-divider">Navigation</p>
+                         
+
+        <div class="sidebar-menu">
+            <a class="menu-item show-submenu" href="#">
+                <i class="fa fa-home bg-red-dark"></i>
+                <em>Home</em>
+            </a> 
+            <%= link_to root_path(name: "Educational"), {class: "default-link menu-item"}  do %>
+                <i class="fa fa-graduation-cap bg-green-dark"></i>
+                <em>Educational</em> 
+            <% end %>
+            <%= link_to root_path(name: "Sports"), {class: "default-link menu-item"}  do %>
+                <i class="fa fa-street-view bg-orange-dark"></i>
+                <em>Sports</em> 
+            <% end %>
+            <%= link_to root_path(name: "Politics"), {class: "default-link menu-item"}  do %>
+                <i class="fa fa-flag bg-teal-dark"></i>
+                <em>Politics</em> 
+            <% end %>
+            <%= link_to root_path(name: "Events"), {class: "default-link menu-item"}  do %>
+                <i class="fa fa-users bg-green-dark"></i>
+                <em>Events</em> 
+            <% end %>
+            <%= link_to root_path(name: "Entertainment"), {class: "default-link menu-item"}  do %>
+                <i class="fa fa-film bg-gray-dark"></i>
+                <em>Entertainment</em> 
+            <% end %>
+            <%= link_to root_path(name: "Announcements"), {class: "default-link menu-item"}  do %>
+                <i class="fa fa-bullhorn bg-magenta-dark"></i>
+                <em>Announcements</em> 
+            <% end %>    
+            <a class="menu-item close-sidebar" href="#">
+                <i class="fa fa-times bg-red-dark"></i>
+                <em>Close</em>
+            </a>
+        </div>
+        <p class="sidebar-footer">Copyright 2015. All rights reserved</p>
+    </div>
+</div>

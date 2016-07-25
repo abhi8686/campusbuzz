@@ -1,0 +1,39 @@
+<div id="page-transitions">
+    
+<div class="page-preloader page-preloader-dark">
+    <img class="page-preload" src="assets/preload.gif">
+</div>
+   
+<div class="header header-dark">
+    <a href="#" class="header-icon-1 show-left-sidebar"><i class="fa fa-navicon"></i></a>
+    <a href="#" class="header-logo"></a>
+    <a href="#" class="header-icon-4 show-right-sidebar"><i class="fa fa-envelope-o"></i></a>
+</div>
+
+<div id="page-content" class="page-content">
+    <div id="page-content-scroll">
+        <div class="content">    
+            <div class="decoration"></div>
+            <div class="page-login full-bottom">
+               
+                <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>                   
+                <div class="login-mail">
+                    <i class="fa fa-envelope-o"></i>
+                   <%= f.email_field :email, autofocus: true, onfocus: "if (this.value=='Email') this.value = ''", onblur: "if (this.value=='') this.value = 'Email'", value: "Email" %>
+                </div>                    
+                <div class="login-password">
+                    <i class="fa fa-lock"></i>
+                    <%= f.password_field :password, autocomplete: "off", onfocus: "if (this.value=='password') this.value = ''", onblur: "if (this.value=='') this.value = 'password'" , value: "password" %>
+                </div>
+                <div class="login-password">
+                    <i class="fa fa-lock"></i>
+                    <%= f.password_field :password_confirmation, autocomplete: "off", onfocus: "if (this.value=='password') this.value = ''", onblur: "if (this.value=='') this.value = 'password'" , value: "password" %>
+                </div>
+                <a href="#" class="login-already">Already Registered?</a>
+                <a href="#" , class= "login-button button button-small button-green button-fullscreen full-bottom" ><%= f.submit "Register", class: "login-button  button-green"%></a>
+                <% end %>
+            </div>
+            
+        </div>
+    </div>
+</div>

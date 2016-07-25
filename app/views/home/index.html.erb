@@ -1,0 +1,93 @@
+
+<script type="text/javascript" src="assets/jquery.js"></script>
+<script type="text/javascript" src="assets/plugins.js"></script>
+<script type="text/javascript" src="assets/custom.js"></script>
+<div id="page-transitions"></div>
+    
+<div class="page-preloader page-preloader-dark">
+    <img class="page-preload" src="assets/preload.gif">
+</div>
+   
+<div class="header header-dark">
+    <a href="#" class="header-icon-1 show-left-sidebar"><i class="fa fa-navicon"></i></a>
+    <a href="#" class="header-logo"></a>
+    <a href="#" class="header-icon-4 show-right-sidebar"><i class="fa fa-envelope-o"></i></a>
+</div>
+<% x = 0 %>
+
+    <div id="page-content" class="page-content">
+        <% if !@posts.blank?  %>
+        <% @posts.each do |y| %>
+            <% x=x+1 %>
+            <div id="<%= x %>" class="post_disable">
+                <div class="responsive-video full-bottom">
+                <!-- <iframe src="https://www.youtube.com/embed/0gv7OC9L2s8"></iframe> -->
+                    <div style="background-image: url(assets/1.jpg); background-size: cover; background-position: center; height: 250px;" >
+                    </div>
+                </div>
+                
+                <div class="content">
+                    <h4 class="center-text bold"><%= y.title %></h4>
+                    <p class="boxed-text center-text half-bottom">
+                        <%= y.body %>
+                    </p>
+                    <a href="#" class="scale-hover pinterest-color social-square post-prev"><i class="fa fa-arrow-left"></i></a>
+                    <a href="#" class="pull-right pscale-hover button-blue social-square post-next"><i class="fa fa-arrow-right"></i></a>
+                    <div class="decoration">
+                    </div>
+                </div>
+            </div>
+        <% end %>
+        <% else %>
+        <div class="responsive-video full-bottom">
+                <!-- <iframe src="https://www.youtube.com/embed/0gv7OC9L2s8"></iframe> -->
+                    <div style="background-image: url(assets/1.jpg); background-size: cover; background-position: center; height: 250px;" >
+                    </div>
+                </div>
+           <div class="content">
+                <p class="boxed-text center-text half-bottom">
+                    <h4 class="center-text bold">No posts yet will add soon</h4> <br>
+                    
+                </p>
+                <div style="margin-left: 42%">
+                <a href="/" class="button button-blue"><i style="color: #fff">Take me back</i></a>
+
+                </div>
+                
+            </div>
+        <% end %>
+    </div>
+
+<script>
+$(document).ready(function(){
+    var a = 1;
+    var b = <%= @posts.count if !@posts.nil? %>
+    $('#'+a).removeClass( "post_disable").addClass('post_active');
+    $(".post-next").click(function(){
+        if(b>a)
+        {
+            
+            $('#'+a).removeClass( "post_active").addClass('post_disable');
+            a=a+1;
+            $('#'+a).removeClass( "post_disable").addClass('post_active');
+        }
+      
+    });
+
+    $(".post-prev").click(function(){
+        if(a>1)
+        {
+            $('#'+a).removeClass( "post_active").addClass('post_disable');
+            a=a-1;
+            $('#1').removeClass( "post_disable").addClass('post_active');
+
+        }
+        
+    });
+});
+
+</script>
+
+    
+
+    

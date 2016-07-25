@@ -1,0 +1,47 @@
+<div id="page-transitions">
+    
+<div class="page-preloader page-preloader-dark">
+    <img class="page-preload" src="images/preload.gif">
+</div>
+   
+<div class="header header-dark">
+    <a href="#" class="header-icon-1 show-left-sidebar"><i class="fa fa-navicon"></i></a>
+    <a href="#" class="header-logo"></a>
+    <a href="#" class="header-icon-4 show-right-sidebar"><i class="fa fa-envelope-o"></i></a>
+</div>
+
+<div id="page-content" class="page-content">
+    <div id="page-content-scroll">
+        <div class="content">    
+            <div class="decoration"></div>
+            <div class="page-login full-bottom">
+                <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                <div class="login-input">
+                    <i class="fa fa-user"></i>
+                    <%= f.text_field :email, :placeholder => "username" ,autofocus: true, :onfocus => "if (this.value=='Username') this.value = ''", :onblur => "if (this.value=='') this.value = 'Username'" %>
+                </div>
+                <div class="login-password">
+                    <i class="fa fa-lock"></i>
+                    <%= f.password_field :password, autocomplete: "off", :value => "password", :onfocus => "if (this.value=='password') this.value = ''", :onblur => "if (this.value=='') this.value = 'password'"  %>
+                    
+                </div>
+                
+                <a href="#" class="login-forgot"><i class="fa fa-eye"></i>Forgot Credentials</a>
+                <a href="sign_up" class="login-create">Create Account<i class="fa fa-user"></i></a>
+                <div class="clear"></div>
+                <a href="#" , class= "login-button button button-small button-green button-fullscreen full-bottom" ><%= f.submit "Login", class: "login-button  button-green"%></a>
+
+               <% end %>
+                <div class="clear"></div><!-- 
+                <a href="#" class="facebook-login facebook-color"><i class="fa fa-facebook"></i>Login with Facebook</a>
+                <a href="#" class="twitter-login twitter-color"><i class="fa fa-twitter"></i>Signin with Twitter</a>
+                <a href="#" class="google-login google-color"><i class="fa fa-google-plus"></i>Register with Google</a> -->
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+    
+<div class="background"></div>
+</div>
